@@ -1,8 +1,8 @@
-
 var typed = new Typed('#element', {
     strings: ['.........','coding','cooking','coding','cooking','coding','cooking','coding'],
     typeSpeed: 50,
   });
+
 
 const progressBarElements = document.querySelectorAll('.skills-progressbar');
 progressBarElements.forEach(progressBar => {
@@ -10,13 +10,18 @@ progressBarElements.forEach(progressBar => {
     progressBar.style.setProperty('--percentage', percentage);
 });
 
-window.onscroll = function () {
-  var navbar = document.querySelector("nav");
-  var sticky = navbar.offsetTop;
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky");
-  } else {
-    navbar.classList.remove("sticky");
-  }
-};
 
+$(document).ready(function () {
+  // Smooth scrolling for all anchor links
+  $("a").on('click', function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 500, function () {
+        window.location.hash = hash;
+      });
+    }
+  });
+});

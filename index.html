@@ -7,44 +7,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-    rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
     />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" href="style.css" />
 
     <title>Portfolio</title>
   </head>
 
   <body>
-
     <!-- navbar -->
-<header>
-  <nav>
-    <div class="left">Pranjal Modanwal</div>
-    <div class="right">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="/">Services</a></li>
-        <li>
-          <a href="mailto:pranjalmodanwal9211@gmail.com">Mail</a>
-        </li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
+    <div id="reusenavbar"></div>
 
     <!-- Main Content -->
     <main>
       <section class="firstsection">
         <div class="leftsection">
-          Hi, my name is <span class="purple">Pranjal Modanwal</span> <br />I am
-          a Full Stack Developer and I love
+          Hi, my name is <br />
+          <span class="purple">Pranjal Modanwal</span> <br />I am a Full Stack
+          Developer and I love <br />
           <span id="element"></span>
           <div class="button">
             <a
               href="https://drive.google.com/file/d/10MD5TzjlpHMODhm5b4cos05G6Didzz5Q/view?usp=drivesdk"
+              target="_blank"
               ><button class="btn">
                 <span></span>
                 <span></span>
@@ -53,7 +40,7 @@
               </button></a
             >
 
-            <a href="https://github.com/pranjal9211"
+            <a href="https://github.com/pranjal9211" target="_blank"
               ><button class="btn">
                 <span></span>
                 <span></span>
@@ -65,48 +52,54 @@
         </div>
         <div class="rightsection">
           <img
-            src="Programmer-Engineering-Development-Illustration-on-transparent-background-PNG.png"
+            src="image/Programmer-Engineering-Development-Illustration-on-transparent-background-PNG.png"
             alt="programer-img"
           />
         </div>
       </section>
-      <hr />
     </main>
+
+    <hr />
 
     <!-- skills section -->
     <section class="secondsection" id="about">
       <span class="gray-txt">All about my skills</span>
       <h1>Skill</h1>
+      <hr />
       <div class="h-line">
         <div class="v-line">
-          <img src="html.png" alt="img" class="skill-img" />
+          <hr />
+          <img src="image/html.png" alt="img" class="skill-img" />
           <div class="skills-progressbar" data-percentage="85%"></div>
           <p>HTML/CSS</p>
         </div>
         <div class="v-line">
-          <img src="js.png" alt="img" class="skill-img" />
+          <hr />
+          <img src="image/js.png" alt="img" class="skill-img" />
           <div class="skills-progressbar" data-percentage="41%"></div>
           <p>JavaScript<sup>®</sup></p>
         </div>
         <div class="v-line">
-          <img src="dbms.png" alt="img" class="skill-img" />
+          <hr />
+          <img src="image/dbms.png" alt="img" class="skill-img" />
           <div class="skills-progressbar" data-percentage="50%"></div>
           <p>DBMS</p>
         </div>
         <div class="v-line">
-          <img src="php.png" alt="img" class="skill-img" />
+          <hr />
+          <img src="image/php.png" alt="img" class="skill-img" />
           <div class="skills-progressbar" data-percentage="68%"></div>
           <p>PHP</p>
         </div>
       </div>
     </section>
 
-    <section class="thirdsection">
+    <section class="thirdsection" id="project">
       <span class="gray-txt">All about my project</span>
       <h1>Project</h1>
       <div class="project">
         <h4>Student Management System</h4>
-        <p class="project-summary">
+        <p class="summary">
           The School Management System (SMS) is a comprehensive web-based
           application meticulously crafted to enhance and simplify various
           facets of school administration. Developed using the powerful
@@ -117,19 +110,31 @@
           authentication mechanism.
         </p>
         <div class="button">
-          <a href="https://github.com/pranjal9211/student-management-system.git"
+          <a
+            href="https://github.com/pranjal9211/student-management-system.git"
+            target="_blank"
             ><button class="btn">
               <span></span>
               <span></span>
               <span></span>
-              <span></span>Download Project
+              <span></span>Project Link
+            </button></a
+          >
+        </div>
+        <div class="button">
+          <a href="http://student-management-system.000.pe/" target="_blank"
+            ><button class="btn">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>View website
             </button></a
           >
         </div>
       </div>
       <div class="project">
         <h4>Portfolio</h4>
-        <p class="project-summary">
+        <p class="summary">
           The Portfolio project is a personal showcase crafted with a focus on
           web development. It encompasses my skills in HTML, CSS, and
           JavaScript. This project serves as a comprehensive representation of
@@ -137,12 +142,12 @@
           You can find the source code on GitHub.
         </p>
         <div class="button">
-          <a href="https://github.com/pranjal9211/portfolio.git"
+          <a href="https://github.com/pranjal9211/portfolio.git" target="_blank"
             ><button class="btn">
               <span></span>
               <span></span>
               <span></span>
-              <span></span>Download Project
+              <span></span>Project Link
             </button></a
           >
         </div>
@@ -153,7 +158,7 @@
       <span class="gray-txt">All about my experience</span>
       <h1>Experience</h1>
       <h4>Fresher</h4>
-      <p class="project-summary">
+      <p class="summary">
         "As a current final-year undergraduate student, I am excited to bring my
         solid foundation in web development and proficiency in HTML, CSS, PHP,
         and JavaScript to your company. Throughout my academic journey, I've
@@ -169,33 +174,9 @@
       </p>
     </section>
 
-    <footer>
-      <div class="footer">
-        <div class="footer-first">Pranjal's Portfolio</div>
-        <div class="footer-second">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-          </ul>
-        </div>
-        <div class="footer-third">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-          </ul>
-        </div>
-        <div class="footer-fourth">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="cc">Copyright&copy; 2024 Pranjal Modanwal. All rights reserved</div> 
-    </footer>
+    <div id="reusefooter"></div>
+    <script src="utilities/navbar.js"></script>
+    <script src="utilities/footer.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

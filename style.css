@@ -5,30 +5,40 @@
 
 body {
   background: linear-gradient(rgb(74, 17, 87), rgb(63, 18, 136), rgb(5, 5, 74));
-  /* min-height: 10vw; */
   color: white;
   font-family: "Poppins", sans-serif;
 }
-nav {
+
+header {
+  background-color: rgb(15, 15, 87);
+  height: 80px;
+  width: 100%;
+  /* position: fixed;  */
+  top: 0;
+  z-index: 2;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+header nav {
   display: flex;
   justify-content: space-around;
+  height: 100%;
   align-items: center;
-  height: 80px;
-  background-color: rgb(15, 15, 87);
+  /* height: 30px; */
 }
 
-nav ul {
+header nav .right ul {
   display: flex;
-  justify-content: center;
 }
 
-nav ul li {
+li,
+a {
   list-style: none;
-  margin: 0 23px;
-}
-
-nav ul li a {
   text-decoration: none;
+  margin: 10px;
+  cursor: pointer;
   color: rgb(214, 237, 160);
   transition: all 0.5s ease-in-out;
 }
@@ -37,39 +47,39 @@ nav ul li a:hover {
   color: rgb(155, 77, 239);
 }
 
+#element,
+.purple {
+  color: aqua;
+}
+
+img {
+  width: 80%;
+}
+
+.skill-img {
+  background: #fffefe;
+  border-radius: 8%;
+  width: 40px;
+}
+
 .left {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .firstsection {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin:150px 0;
+  margin: 50px 0;
 }
 
 .firstsection > div {
   width: 30%;
-  /* background-color: blanchedalmond; */
 }
 
 .leftsection {
   font-size: 2.5rem;
 }
-
-.button {
-  padding: 15px 0;
-}
-
-/* .leftsection .btn {
-padding: 8px;
-background: #cb2df2;
-color: Iwhite;
-border: 2px solid white;
-border-radius: 6px;
-font-size: 16px;
-cursor: pointer;
-} */
 
 .button .btn {
   position: relative;
@@ -181,88 +191,36 @@ cursor: pointer;
     0 0 100px #03f484;
 }
 
-.rightsection img {
-  width: 80%;
-}
-
-main hr {
-  border: 1.5px solid rgb(201, 136, 225);
-  margin: 40px 60px;
-}
-
-.purple,
-#element {
-  color: #9d60f9;
-}
-
-.secondsection {
-  max-width: 80vw;
-  height: 45vh;
-  margin: auto;
-  padding-top: 90px;
-}
-
-.thirdsection {
-  max-width: 80vw;
-  height: 75vh;
-  margin: auto;
-}
-
-.fourthsection {
-  max-width: 80vw;
-  height: 45vh;
-  margin: auto;
-}
-
-.secondsection h1 {
-  font-size: 1.9rem;
-}
-
-.gray-txt {
-  color: gray;
+.secondsection hr {
+  border: none;
+  height: 3px;
+  background-color: rgb(254, 167, 255);
 }
 
 .secondsection .h-line {
-  background: white;
-  width: 77vw;
-  height: 2px;
-  margin: 56px 0;
   display: flex;
+  justify-content: space-evenly;
 }
 
-.secondsection .v-line {
-  height: 40px;
-  width: 1px;
-  background-color: rgb(255, 255, 255);
-  margin: 0px 120px;
+.v-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.skill-img {
-  width: 50px;
-  position: relative;
-  top: -53px;
-  left: -21px;
+.v-line hr {
+  width: 3px;
+  height: 34px;
 }
 
 .skills-progressbar {
   position: relative;
   width: 100px;
   background-color: #bafffc;
-  /* Background color of the progress bar */
   border-radius: 5px;
   padding: 8px;
-  left: 5px;
-  top: -40px;
+  margin-top: 8px;
 }
-
-.secondsection .v-line p {
-  position: relative;
-  font-size: 12px;
-  text-align: center;
-  top: -30px;
-  left: -10px;
-}
-
 .skills-progressbar::after {
   content: "";
   position: absolute;
@@ -280,7 +238,6 @@ main hr {
   border-radius: 5px;
   transition: width 2.5s ease;
 }
-
 .skills-progressbar::before {
   content: attr(data-percentage);
   position: absolute;
@@ -292,179 +249,101 @@ main hr {
   z-index: 1;
 }
 
-
-
-.project-summary {
-  font-size: .8rem;
-  color: rgb(193, 225, 255);
+.thirdsection .project {
+  margin-top: 21px;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
+.thirdsection .project .button a {
+  margin: 0px;
+}
+
+.thirdsection .project .button {
+  margin-top: 8px;
+}
+
+.summary {
+  font-size: 0.8rem;
+  color: #88f2e4;
+}
+
+h1 {
+  margin: 5px 0 20px 0;
+  text-decoration: 3px solid rgb(255, 255, 255) underline;
+}
+
+.gray-txt {
+  color: gray;
+}
+
+.secondsection,
+.thirdsection,
+.fourthsection,
+footer {
+  margin: 80px 130px 100px 120px;
+}
+
+footer {
+  display: flex;
+  background: #000;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: 100%;
-  z-index: 1000;
+  margin: 5px 0 10px 0;
 }
 
-footer {
-  background-color: rgb(0, 0, 0);
-}
-
-.footer {
-  height: 120px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px;
-  color: white;
-}
-
-footer ul {
-  list-style: none;
-}
-
-footer ul a {
-  text-decoration: none;
-}
-
-footer .cc {
-  text-align: center;
-  padding-bottom: 12px;
-}
-
-footer {
-  background-color: rgb(0, 0, 0);
-}
-
-.footer {
-  height: 120px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px;
-  color: white;
-}
-
-footer ul {
-  list-style: none;
-}
-
-footer ul a {
-  text-decoration: none;
-}
-
-footer .cc {
-  text-align: center;
-  padding-bottom: 12px;
-}
-
-/* Add the following media query for smaller screens (e.g., mobile devices) */
 @media only screen and (max-width: 768px) {
-  body {
-    font-size: 14px; /* Adjust font size for better readability on smaller screens */
-  }
-
-  header {
-    height: auto;
-    text-align: center;
-  }
-
-  nav {
+  nav,
+  .firstsection,
+  .footer {
     flex-direction: column;
   }
 
-  nav ul {
-    margin-top: 10px;
-    padding: 0;
+  .secondsection .skills-progressbar {
+    display: flex;
+    height: 26px;
+    width: 5px;
+    font-size: xx-small;
+    margin: 2px;
   }
 
-  nav ul li {
-    margin: 0 14px;
+  .secondsection .skill-img {
+    width: 30px;
+    border-radius: 50%;
+  }
+
+  .leftsection {
+    font-size: rem;
   }
 
   .firstsection {
-    flex-direction: column;
-    align-items: center;
-    margin: 100px 0; 
-  }
-
-  .firstsection > div {
-    width: 100%; 
-    text-align: center;
-  }
-
-  .rightsection img {
-    width: 100%;
-  }
-
-  main hr {
-    margin: 40px 17px;
+    margin: 30px 0 0 0;
+    padding: 0 1px;
   }
 
   .secondsection,
   .thirdsection,
   .fourthsection {
-    max-width: 100%; 
-    padding: 0 10px 60px 10px; 
+    margin: 50px 30px 10px 20px;
   }
 
-  .secondsection {
-    height: 38vh;
-    padding-top: 90px;
-  }
-
-  .secondsection .h-line {
-    margin: 0 30px;
-    flex-direction: column;
-    padding: 0%;   
-    height: 200px;
-    width: 2px;
-  }
-  
-
-
-  .secondsection .v-line {
-    /* border: 2px solid red; */
-    width: 2px;
-    flex: 100%;
-    position: relative;
-    left: -101px;
-    top: 8px;
-    transform: rotate(90deg);
-  }
-
-  .secondsection .v-line img,
-  .secondsection .v-line .skills-progressbar,
-  .secondsection .v-line p {
-    transform: rotate(-90deg);
-  }
-  .secondsection .v-line img {
-    top: 9px;
-    width: 25px;
-    left: -28px;
-  }
-
-  .secondsection .v-line .skills-progressbar {
-    left: -57px;
-    top: -97.2px;
-  }
-
-  .secondsection .v-line p {
-    top: -179px;
-    left: 1px;
-  }
-
-  .project-summary {
-    font-size: 0.8rem; /* Adjust font size for better readability on smaller screens */
-  }
-
-  footer {
-    flex-direction: column;
+  .firstsection > div {
+    width: 100%;
     text-align: center;
   }
 
-  .footer {
-    height: auto;
-    padding: 20px;
+  .footer ul {
+    display: flex;
+  }
+
+  nav .right li {
+    margin: 0;
   }
 }
