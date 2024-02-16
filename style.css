@@ -7,18 +7,21 @@ body {
   background: linear-gradient(rgb(74, 17, 87), rgb(63, 18, 136), rgb(5, 5, 74));
   color: white;
   font-family: "Poppins", sans-serif;
+  padding-top: 70px;
 }
 
 header {
-  background-color: rgb(15, 15, 87);
+  background: #141628;
   height: 80px;
   width: 100%;
-  position: sticky;
   top: 0;
   z-index: 2;
+  position: fixed;
 }
+
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 header nav {
